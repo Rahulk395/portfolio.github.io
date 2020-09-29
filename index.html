@@ -12,19 +12,30 @@
 <body>
 
 	<div class="main-container">
+<div class="hamburger start-btn">
+	<span>&#9776;</span>
+	
+
+</div>
 
 		<!-----------Aside------->
-		<div class="Aside">
+		<div class="Aside my-style">
+			<div class="hamburger close-btn">
+	<span>&times;</span>
+	
+
+</div>
+
 			<!------nav-logo---->
 			<div class="logo"><a href="#">Rahul</a></div>
 			<!----nav-list--->
 			<ul class="nav-list">
-				<li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
-				<li><a href="#about"><i class="fa fa-user"></i>About</a></li>
-				<li><a href="#services"><i class="fa fa-list"></i>Services</a></li>
+				<li><a href="#home" class="active" id="home1"><i class="fa fa-home"></i>Home</a></li>
+				<li><a href="#about" id="about1"><i class="fa fa-user"></i>About</a></li>
+				<li><a href="#services" id="services1"><i class="fa fa-list"></i>Services</a></li>
 				<!-- <li><a href="#"><i class="fa fa-briefcase"></i>Portfolio</a></li> -->
-				<li><a href="#projects"><i class="fa fa-envelope"></i>Projects</a></li>
-				<li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
+				<li><a href="#projects" id="projects1"><i class="fa fa-envelope"></i>Projects</a></li>
+				<li><a href="#contact" id="contact1"><i class="fa fa-comments"></i>Contact</a></li>
 
 			</ul>		
 
@@ -207,7 +218,7 @@
 						<div class="services-item-inner">
 							<div class="font"><i class="fa fa-line-chart"></i></div>
 							<h4>Social Media Marketing</h4>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </p>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. lorem </p>
 						</div>
 						
 					</div>
@@ -290,7 +301,7 @@
 						<div class="projects-items padd-15">
 							<div class="projects-items-inner">
 								<div class="projects-img">
-									<img src="EWX.png">
+									<img src="EWX.png" class="fitn">
 
 								
 								<div class="projects-link"><a href="link/imageslider.html" target="_blank">Click to see projects</a></div>
@@ -371,7 +382,7 @@
 				</div>
 				<div class="row">
 					<div class="contact-form padd-15">
-								<div class="name"><input type="text" name="Name" placeholder="Name" required class="text-name"></div>
+								<div class="name rahulk"><input type="text" name="Name" placeholder="Name" required class="text-name"></div>
 								
 						</div>
 						<div class="contact-form padd-15">
@@ -437,8 +448,57 @@
 
 	</div>
 
+<!--  -->
+<script type="text/javascript">
+	const hamburger = document.querySelector(".hamburger");
+	const aside = document.querySelector(".Aside");
+	const mainContent = document.querySelector(".main-content");
+	const closebutton = document.querySelector(".close-btn");
+	const home1 = document.querySelector("#home1");
+	const about1 = document.querySelector("#about1");
+	const services1 = document.querySelector("#services1");
+	const projects1 = document.querySelector("#projects1");
+	const contact1 = document.querySelector("#contact1");	
+
+	hamburger.addEventListener("click",function(){
+		aside.style.left = "0px";
+		aside.style.zIndex = "1";
+		aside.style.transition = "1s ease";
 
 
+
+	});
+	closebutton.addEventListener("click",function(){
+		aside.style.left = "-270px";
+		aside.style.transition = "1s ease";
+		
+
+	});
+	// home1.addEventListener("click",function(){
+	// 	aside.style.left = "-270px";1
+	// 	aside.style.transition = "1s ease";
+
+	// });
+	// about1.addEventListener("click",function(){
+	// 	aside.style.left = "-270px";
+	// 	aside.style.transition = "1s ease";
+
+	// });
+	// services1.addEventListener("click",function(){
+	// 	aside.style.left = "-270px";
+	// 	aside.style.transition = "1s ease";
+
+	// });
+	// projects1.addEventListener("click",function(){
+	// 	aside.style.left = "-270px";
+	// 	aside.style.transition = "1s ease";
+
+	// });
+	// contact1.addEventListener("click",function(){
+	// 	aside.classList.add("my-style");
+
+	// });
+</script>
 	
 
 </body>
